@@ -7,7 +7,7 @@ import (
 	"github.com/funjack/launchcontrol/protocol/funscript"
 )
 
-// Cleanup returns a copy of a list of actions with all redendant actions
+// Cleanup returns a copy of a list of actions with all redundant actions
 // removed.
 func Cleanup(f []funscript.Action) []funscript.Action {
 	if len(f) < 2 {
@@ -32,7 +32,7 @@ type GeneratetOpts struct {
 	SampleRate float64
 	// Tolerance that is used to round values during comparisons.
 	Tolerance byte
-	// MinInterval is the minumum amount of time in miliseconds between actions.
+	// MinInterval is the minimum amount of time in miliseconds between actions.
 	MinInterval int
 }
 
@@ -135,7 +135,7 @@ func round(b, tolerance byte) byte {
 }
 
 // pauses returns all the start and stop sample positions in p with pauses
-// withing the given tolerance and have the length of the specified interval.
+// within the given tolerance and have the length of the specified interval.
 func pauses(p []byte, interval int, tolerance byte) []int {
 	var f []int
 	last := p[0]
