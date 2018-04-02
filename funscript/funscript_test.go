@@ -17,11 +17,17 @@ func TestFunscriptAction(t *testing.T) {
 		t.Errorf("action did not match, want %+v, got %+v", want, action)
 	}
 	action, err = funscriptAction(raw, 5, 5.0, 5)
+	if err != nil {
+		t.Errorf("no error expected: %v", err)
+	}
 	want = funscript.Action{At: 1000, Pos: 0}
 	if action != want {
 		t.Errorf("action did not match, want %+v, got %+v", want, action)
 	}
 	action, err = funscriptAction(raw, 10, 5.0, 5)
+	if err != nil {
+		t.Errorf("no error expected: %v", err)
+	}
 	want = funscript.Action{At: 2000, Pos: 50}
 	if action != want {
 		t.Errorf("action did not match, want %+v, got %+v", want, action)
